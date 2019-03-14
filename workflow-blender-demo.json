@@ -1,0 +1,65 @@
+{
+  "name":"create-render-movie",
+  "storage":{
+    "type":"b2drop",
+    "b2drop":{
+      "app-username":"",
+      "app-password":"",
+      "mountpoint":"/data"
+    }
+  },
+  "jobs":[
+    {
+      "name":"render-frames",
+      "resources":{
+        "nodes":1,
+        "cpus":4,
+        "memory":4,
+        "disk":10
+      },
+      "artifacts":[
+        "https://download.blender.org/demo/test/classroom.zip"
+      ],
+      "tasks":[
+        {
+          "image":"ikester/blender:latest",
+          "cmd":"classroom/classroom.blend -o /data/frame_### -f $(ProminenceJobInstanceId)",
+          "runtime":"udocker"
+        }
+      ],
+      "instances":10
+    },
+    {
+      "name":"create-movie",
+      "resources":{
+        "nodes":1,
+        "cpus":1,
+        "memory":1,
+        "disk":10
+      },
+      "tasks":[
+        {
+          "image":"jrottenberg/ffmpeg:3.4-alpine",
+          "cmd":"-framerate 24 -i frame_%03d.png movie-blender-classroom.mp4",
+          "runtime":"udocker",
+          "workdir":"/data"
+        },
+        {
+          "image":"busybox",
+          "cmd":"rm -f /data/frame_*.png",
+          "runtime":"udocker"
+        }
+      ]
+    }
+  ],
+  "dependencies":[
+    {
+      "parents":[
+        "render-frames"
+      ],
+      "children":[
+        "create-movie"
+      ]
+    }
+  ]
+}
