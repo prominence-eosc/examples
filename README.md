@@ -1,5 +1,5 @@
 # Example jobs and workflows
-The examples are run by typing:
+Each example can be run by typing:
 ```
 prominence create <filename.json>
 ```
