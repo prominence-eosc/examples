@@ -3,8 +3,8 @@
   "storage":{
     "type":"b2drop",
     "b2drop":{
-      "app-username":"",
-      "app-password":"",
+      "app-username":"<username>",
+      "app-password":"<password>",
       "mountpoint":"/data"
     }
   },
