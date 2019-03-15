@@ -9,7 +9,6 @@
     "render.png"
   ],
   "resources": {
-    "nodes": 1,
     "cpus": 1,
     "memory": 1,
     "disk": 10
