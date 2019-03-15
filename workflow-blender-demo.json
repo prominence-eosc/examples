@@ -12,7 +12,6 @@
     {
       "name":"render-frames",
       "resources":{
-        "nodes":1,
         "cpus":4,
         "memory":4,
         "disk":10
@@ -32,7 +31,6 @@
     {
       "name":"create-movie",
       "resources":{
-        "nodes":1,
         "cpus":1,
         "memory":1,
         "disk":10
