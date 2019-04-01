@@ -25,8 +25,7 @@
           "cmd":"classroom/classroom.blend -o /data/frame_### -f $(ProminenceJobInstanceId)",
           "runtime":"udocker"
         }
-      ],
-      "instances":10
+      ]
     },
     {
       "name":"create-movie",
