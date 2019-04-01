@@ -2,10 +2,10 @@
   "name":"create-render-movie",
   "storage":{
     "type":"b2drop",
+    "mountpoint":"/data",
     "b2drop":{
       "app-username":"<username>",
-      "app-password":"<password>",
-      "mountpoint":"/data"
+      "app-password":"<password>"
     }
   },
   "jobs":[
