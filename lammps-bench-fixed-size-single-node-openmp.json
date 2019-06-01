@@ -1,0 +1,62 @@
+{
+  "name": "lammps-bench-fixed-size-parallel-openmp",
+  "resources": {
+    "cpus": 8,
+    "disk": 10,
+    "memory": 8,
+    "nodes": 1,
+    "walltime": 720
+  },
+  "artifacts": [
+    {
+      "url": "https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz"
+    }
+  ],
+  "tasks": [
+    {
+      "cmd": "/lmp_mpi -sf omp -in in.lj",
+      "image": "alahiff/lammps-openmpi-omp:latest",
+      "runtime": "udocker",
+      "env": {
+        "OMP_NUM_THREADS": "8"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench"
+    },
+    {
+      "cmd": "/lmp_mpi -sf omp -in in.chain",
+      "image": "alahiff/lammps-openmpi-omp:latest",
+      "runtime": "udocker",
+      "env": {
+        "OMP_NUM_THREADS": "8"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench"
+    },
+    {
+      "cmd": "/lmp_mpi -sf omp -in in.eam",
+      "image": "alahiff/lammps-openmpi-omp:latest",
+      "runtime": "udocker",
+      "env": {
+        "OMP_NUM_THREADS": "8"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench"
+    },
+    {
+      "cmd": "/lmp_mpi -sf omp -in in.chute",
+      "image": "alahiff/lammps-openmpi-omp:latest",
+      "runtime": "udocker",
+      "env": {
+        "OMP_NUM_THREADS": "8"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench"
+    },
+    {
+      "cmd": "/lmp_mpi -sf omp -in in.rhodo",
+      "image": "alahiff/lammps-openmpi-omp:latest",
+      "runtime": "udocker",
+      "env": {
+        "OMP_NUM_THREADS": "8"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench"
+    }
+  ]
+}
