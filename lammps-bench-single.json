@@ -1,0 +1,47 @@
+{
+  "name": "lammps-bench-single",
+  "resources": {
+    "cpus": 2,
+    "disk": 10,
+    "memory": 2,
+    "nodes": 1,
+    "walltime": 720
+  },
+  "artifacts": [
+    {
+      "url": "lammps-bench.tgz"
+    }
+  ],
+  "tasks": [
+    {
+      "cmd": "/lmp_mpi -in in.lj",
+      "image": "alahiff/lammps-openmpi:latest",
+      "runtime": "udocker",
+      "workdir": "bench"
+    },
+    {
+      "cmd": "/lmp_mpi -in in.chain",
+      "image": "alahiff/lammps-openmpi:latest",
+      "runtime": "udocker",
+      "workdir": "bench"
+    },
+    {
+      "cmd": "/lmp_mpi -in in.eam",
+      "image": "alahiff/lammps-openmpi:latest",
+      "runtime": "udocker",
+      "workdir": "bench"
+    },
+    {
+      "cmd": "/lmp_mpi -in in.chute",
+      "image": "alahiff/lammps-openmpi:latest",
+      "runtime": "udocker",
+      "workdir": "bench"
+    },
+    {
+      "cmd": "/lmp_mpi -in in.rhodo",
+      "image": "alahiff/lammps-openmpi:latest",
+      "runtime": "udocker",
+      "workdir": "bench"
+    }
+  ]
+}
