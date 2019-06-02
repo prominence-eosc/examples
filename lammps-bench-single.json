@@ -14,31 +14,31 @@
   ],
   "tasks": [
     {
-      "cmd": "/lmp_mpi -in in.lj",
+      "cmd": "lmp_mpi -in in.lj",
       "image": "alahiff/lammps-openmpi:latest",
       "runtime": "udocker",
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -in in.chain",
+      "cmd": "lmp_mpi -in in.chain",
       "image": "alahiff/lammps-openmpi:latest",
       "runtime": "udocker",
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -in in.eam",
+      "cmd": "lmp_mpi -in in.eam",
       "image": "alahiff/lammps-openmpi:latest",
       "runtime": "udocker",
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -in in.chute",
+      "cmd": "lmp_mpi -in in.chute",
       "image": "alahiff/lammps-openmpi:latest",
       "runtime": "udocker",
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -in in.rhodo",
+      "cmd": "lmp_mpi -in in.rhodo",
       "image": "alahiff/lammps-openmpi:latest",
       "runtime": "udocker",
       "workdir": "lammps-stable_12Dec2018/bench"
