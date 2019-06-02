@@ -1,8 +1,4 @@
 # Example jobs and workflows
-Each example can be run by typing:
-```
-prominence run <filename.json>
-```
 
 ## Raysect
 ### job-raysect-lambert
