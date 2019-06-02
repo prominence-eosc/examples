@@ -17,6 +17,9 @@ Note that the B2DROP `app-username` and `app-password` need to be set in the JSO
 ## LAMMPS
 ### lammps-bench-single
 This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the serial one processor runs.
+```
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/lammps-bench-single.json
+```
 
 ### lammps-bench-fixed-size-single-node
 This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the parallel fixed-size runs using 8 cores on a single node using Open MPI.
