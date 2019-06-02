@@ -32,7 +32,7 @@
       "workdir": "lammps-stable_12Dec2018/bench",
       "type": "openmpi",
       "procsPerNode": 2
-    }
+    },
     {
       "image": "alahiff/lammps-openmpi-omp",
       "cmd": "lmp_mpi -sf omp -in in.eam",
@@ -43,7 +43,7 @@
       "workdir": "lammps-stable_12Dec2018/bench",
       "type": "openmpi",
       "procsPerNode": 2
-    }
+    },
     {
       "image": "alahiff/lammps-openmpi-omp",
       "cmd": "lmp_mpi -sf omp -in in.chute",
@@ -54,7 +54,7 @@
       "workdir": "lammps-stable_12Dec2018/bench",
       "type": "openmpi",
       "procsPerNode": 2
-    }
+    },
     {
       "image": "alahiff/lammps-openmpi-omp",
       "cmd": "lmp_mpi -sf omp -in in.rhodo",
