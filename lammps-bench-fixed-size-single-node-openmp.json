@@ -14,7 +14,7 @@
   ],
   "tasks": [
     {
-      "cmd": "/lmp_mpi -sf omp -in in.lj",
+      "cmd": "lmp_mpi -sf omp -in in.lj",
       "image": "alahiff/lammps-openmpi-omp:latest",
       "runtime": "udocker",
       "env": {
@@ -23,7 +23,7 @@
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -sf omp -in in.chain",
+      "cmd": "lmp_mpi -sf omp -in in.chain",
       "image": "alahiff/lammps-openmpi-omp:latest",
       "runtime": "udocker",
       "env": {
@@ -32,7 +32,7 @@
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -sf omp -in in.eam",
+      "cmd": "lmp_mpi -sf omp -in in.eam",
       "image": "alahiff/lammps-openmpi-omp:latest",
       "runtime": "udocker",
       "env": {
@@ -41,7 +41,7 @@
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -sf omp -in in.chute",
+      "cmd": "lmp_mpi -sf omp -in in.chute",
       "image": "alahiff/lammps-openmpi-omp:latest",
       "runtime": "udocker",
       "env": {
@@ -50,7 +50,7 @@
       "workdir": "lammps-stable_12Dec2018/bench"
     },
     {
-      "cmd": "/lmp_mpi -sf omp -in in.rhodo",
+      "cmd": "lmp_mpi -sf omp -in in.rhodo",
       "image": "alahiff/lammps-openmpi-omp:latest",
       "runtime": "udocker",
       "env": {
