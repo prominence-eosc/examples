@@ -1,0 +1,71 @@
+{
+  "artifacts": [
+    {
+      "url": "https://github.com/lammps/lammps/archive/stable_12Dec2018.tar.gz"
+    }
+  ],
+  "resources": {
+    "nodes": 2,
+    "cpus": 4,
+    "memory": 4,
+    "disk": 10
+  },
+  "tasks": [
+    {
+      "image": "alahiff/lammps-openmpi-omp",
+      "cmd": "lmp_mpi -sf omp -in in.lj",
+      "runtime": "singularity",
+      "env": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench",
+      "type": "openmpi",
+      "procsPerNode": 2
+    },
+    {
+      "image": "alahiff/lammps-openmpi-omp",
+      "cmd": "lmp_mpi -sf omp -in in.chain",
+      "runtime": "singularity",
+      "env": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench",
+      "type": "openmpi",
+      "procsPerNode": 2
+    }
+    {
+      "image": "alahiff/lammps-openmpi-omp",
+      "cmd": "lmp_mpi -sf omp -in in.eam",
+      "runtime": "singularity",
+      "env": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench",
+      "type": "openmpi",
+      "procsPerNode": 2
+    }
+    {
+      "image": "alahiff/lammps-openmpi-omp",
+      "cmd": "lmp_mpi -sf omp -in in.chute",
+      "runtime": "singularity",
+      "env": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench",
+      "type": "openmpi",
+      "procsPerNode": 2
+    }
+    {
+      "image": "alahiff/lammps-openmpi-omp",
+      "cmd": "lmp_mpi -sf omp -in in.rhodo",
+      "runtime": "singularity",
+      "env": {
+        "OMP_NUM_THREADS": "2"
+      },
+      "workdir": "lammps-stable_12Dec2018/bench",
+      "type": "openmpi",
+      "procsPerNode": 2
+    }
+  ],
+  "name": "lammps-bench-hybrid"
+}
