@@ -38,3 +38,10 @@ To run this example, type:
 ```
 prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/lammps-bench-fixed-size-single-node-openmp.json
 ```
+### lammps-bench-hybrid
+This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the parallel fixed-size runs using 8 cores on a single node using OpenMP.
+
+To run this example, type:
+```
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/lammps-bench-hybrid.json
+```
