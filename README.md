@@ -23,6 +23,12 @@ prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master
 
 ### lammps-bench-fixed-size-single-node
 This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the parallel fixed-size runs using 8 cores on a single node using Open MPI.
+```
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/lammps-bench-fixed-size-single-node.json
+```
 
 ### lammps-bench-fixed-size-single-node-openmp
 This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the parallel fixed-size runs using 8 cores on a single node using OpenMP.
+```
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/lammps-bench-fixed-size-single-node-openmp.json
+```
