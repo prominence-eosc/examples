@@ -14,7 +14,7 @@ Note that the B2DROP `app-username` and `app-password` need to be set in the JSO
 ### ospray-streamlines-demo.ipynb
 This is the NASA Streamlines demo from http://www.ospray.org/demos.html. PROMINENCE is used to do an offline render.
 
-Here we access PROMINENCE entirely from a Juypter notebook. The example notebook was created on Google Colab but any other Jupyter platform can be used.
+Here we access PROMINENCE entirely from a Juypter notebook. The example notebook was created on Google Colab but any other Jupyter platform can be used. Note that the PROMINENCE URLs were replaced with `prominence.local`.
 
 ## LAMMPS
 ### lammps-bench-single
