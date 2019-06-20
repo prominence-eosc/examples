@@ -10,6 +10,12 @@ This is a 2 step workflow which renders frames from the Blender classroom demo (
 
 Note that the B2DROP `app-username` and `app-password` need to be set in the JSON file. An application username and password can be generated on the B2DROP website.
 
+## OSPRay
+### ospray-streamlines-demo.ipynb
+This is the NASA Streamlines demo from http://www.ospray.org/demos.html. PROMINENCE is used to do an offline render.
+
+Here we access PROMINENCE entirely from a Juypter notebook. The example notebook was created on Google Colab but any other Jupyter platform can be used.
+
 ## LAMMPS
 ### lammps-bench-single
 This runs sequentially the 5 benchmark problems described here: https://github.com/lammps/lammps/tree/master/bench. These are the serial one processor runs.
