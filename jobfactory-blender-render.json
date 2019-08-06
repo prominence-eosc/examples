@@ -1,37 +1,37 @@
 {
-  "name": "classroom-movie",
-  "jobs": [
-    {
-      "resources": {
-        "nodes": 8,
-        "cpus": 8,
-        "memory": 8,
-        "disk": 10
-      },
-      "artifacts": [
-        {
-          "url": "https://download.blender.org/demo/test/classroom.zip"
-        }
-      ],
-      "tasks": [
-        {
-          "image": "ikester/blender:latest",
-          "runtime": "udocker",
-          "cmd": "-b classroom/classroom.blend -o frame_### -f $frame"
-        }
-      ],
-      "name": "render"
-    }
-  ],
-  "factory": {
-    "type": "parametricSweep",
-    "parameterSets":[
+   "name":"classroom-movie",
+   "jobs":[
       {
-        "name": "frame",
-        "start": 1,
-        "end": 100,
-        "step": 1
+         "resources":{
+            "nodes":8,
+            "cpus":8,
+            "memory":8,
+            "disk":10
+         },
+         "artifacts":[
+            {
+               "url":"https://download.blender.org/demo/test/classroom.zip"
+            }
+         ],
+         "tasks":[
+            {
+               "image":"ikester/blender:latest",
+               "runtime":"udocker",
+               "cmd":"-b classroom/classroom.blend -o frame_### -f $frame"
+            }
+         ],
+         "name":"render"
       }
-   ]
-  }
+   ],
+   "factory":{
+      "type":"parametricSweep",
+      "parameterSets":[
+         {
+            "name":"frame",
+            "start":1,
+            "end":100,
+            "step":1
+         }
+      ]
+   }
 }
