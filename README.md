@@ -6,8 +6,17 @@ Renders the image in the Raysect quick start guide, see: https://raysect.github.
 
 ## Blender
 
+
+### jobs-blender-render
+Here we define a group of independent jobs to render 4 frames from the Blender classroom demo (see https://www.blender.org/download/demo-files/). For this particular example a better method would be to use a job factory (below).
+
+To run this example, type:
+```
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/jobfactory-blender-render.json
+```
+
 ### jobfactory-blender-render
-Here we use a parametric sweep to render 100 frames of the Blender classroom demo (see https://www.blender.org/download/demo-files/).
+Here we use a parametric sweep to render 100 frames of the Blender classroom demo.
 
 To run this example, type:
 ```
