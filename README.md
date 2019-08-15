@@ -12,7 +12,7 @@ Here we define a group of independent jobs to render 4 frames from the Blender c
 
 To run this example, type:
 ```
-prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/jobfactory-blender-render.json
+prominence run https://raw.githubusercontent.com/prominence-eosc/examples/master/jobs-blender-render.json
 ```
 
 ### jobfactory-blender-render
