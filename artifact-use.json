@@ -1,0 +1,21 @@
+{
+  "resources": {
+    "memory": 1,
+    "cpus": 1,
+    "nodes": 1,
+    "disk": 10
+  },
+  "name": "",
+  "artifacts": [
+    {
+      "url": "https://gist.githubusercontent.com/alahiff/c694a7f4789bec056e59cff395733d04/raw/25e5d22b5a6b3c7d8ecde08c43c30a69385da175/test.sh"
+    }
+  ],
+  "tasks": [
+    {
+      "image": "centos:7",
+      "runtime": "singularity",
+      "cmd": "cat test.sh"
+    }
+  ]
+}
